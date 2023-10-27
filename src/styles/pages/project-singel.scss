@@ -1,0 +1,103 @@
+main {
+  padding-block: 3rem;
+  @media (min-width: 992px) {
+    padding-block: 9.325rem;
+  }
+}
+
+.project-single {
+  h2 {
+    font-size: 1.75rem;
+    margin-block-end: 1.5rem;
+    @media (min-width: 768px) {
+      font-size: 2.5rem;
+    }
+  }
+
+  .full-width {
+    border-radius: 50px;
+    margin-block-end: 2rem;
+  }
+}
+
+.gallery {
+  margin-block: 2.25rem;
+  @media (min-width: 992px) {
+    margin-block: 9.375rem;
+  }
+
+  img {
+    border-radius: 20px;
+    width: 100%;
+  }
+}
+
+.more-projects {
+  img {
+    width: 100%;
+    border-radius: 26px;
+  }
+
+  .swiper-wrapper {
+    margin-block-end: 2rem;
+  }
+  .swiper-pagination {
+    text-align: center;
+  }
+}
+
+.description {
+  font-size: 1.125rem;
+  color: #4d5053;
+  @media (min-width: 992px) {
+    font-size: 1.625rem;
+  }
+}
+
+.category {
+  font-weight: 700;
+  font-size: 1rem;
+  padding-block-end: 0.5rem;
+  margin-block-end: 2rem;
+  border-block-end: 1.5px solid var(--clr-brown-800);
+  @media (min-width: 992px) {
+    font-size: 1.25rem;
+  }
+
+  &::before {
+    content: "";
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    background-color: var(--clr-brown-800);
+    border-radius: 4px;
+    margin-inline-end: 0.625rem;
+  }
+}
+
+.start-project {
+  text-align: center;
+  margin-block-start: 4.5rem;
+  @media (min-width: 768px) {
+    margin-block-start: 9.375rem;
+  }
+
+  &__logo {
+    margin-inline: auto;
+    margin-block-end: 3rem;
+    @media (min-width: 768px) {
+      margin-block-end: 5rem;
+    }
+  }
+
+  h2 {
+    text-decoration: none;
+    font-size: 2.5rem;
+    display: inline-block;
+    padding-block-end: 1rem;
+    border-block-end: 1px solid var(--clr-brown-800);
+    @media (min-width: 768px) {
+      font-size: 3rem;
+    }
+  }
+}

@@ -1,0 +1,119 @@
+.nav {
+  position: absolute;
+  inset-block-start: 0;
+  inset-inline: 0;
+  z-index: 100;
+  padding-block-start: 1.25rem;
+  @media (min-width: 992px) {
+    padding-block-start: 2.5rem;
+  }
+
+  &__grid {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    @media (max-width: 991px) {
+      width: 100px;
+    }
+  }
+
+  &__list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    @media (max-width: 991px) {
+      position: absolute;
+      inset-inline: 0;
+      inset-block-start: 110%;
+      padding: 2rem;
+      background-color: #f4f0ec;
+      text-align: center;
+      border-radius: 10px;
+
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease-in-out;
+    }
+    @media (min-width: 992px) {
+      flex-direction: row;
+    }
+
+    &.open {
+      opacity: 1 !important;
+      pointer-events: all !important;
+    }
+
+    &-item {
+      & + & {
+        @media (max-width: 991px) {
+          margin-block-start: 1rem;
+        }
+        @media (min-width: 992px) {
+          margin-inline-start: 2.5rem;
+        }
+      }
+
+      &:last-child {
+        display: flex;
+        justify-content: center;
+        @media (min-width: 992px) {
+          margin-inline-start: 5rem;
+          padding-inline-start: 1rem;
+          border-inline-start: 1px solid var(--clr-white);
+        }
+      }
+    }
+  }
+
+  &__link {
+    line-height: 1.25;
+    text-decoration: none;
+    @media (max-width: 991px) {
+      color: var(--clr-brown-800);
+    }
+    @media (min-width: 992px) {
+      color: var(--clr-white);
+    }
+  }
+
+  .lang {
+    display: flex;
+    align-items: center;
+    @media (max-width: 767px) {
+      justify-content: center;
+    }
+
+    svg {
+      margin-inline-end: 8px;
+      @media (max-width: 991px) {
+        display: none;
+        // color: var(--clr-brown-800);
+      }
+    }
+  }
+
+  &__toggler {
+    appearance: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    border: none;
+    @media (min-width: 992px) {
+      display: none;
+      pointer-events: none;
+    }
+
+    svg {
+      color: var(--clr-white);
+    }
+  }
+}
+
+/* --- */

@@ -1,0 +1,19 @@
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__item {
+    position: relative;
+
+    & + & {
+      margin-inline-start: 0.5rem;
+    }
+  }
+
+  &__item:not(:last-child)::after {
+    content: "/";
+    display: inline-block;
+    margin-inline-start: 0.5rem;
+  }
+}

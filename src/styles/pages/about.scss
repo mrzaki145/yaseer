@@ -1,0 +1,148 @@
+main {
+  padding-block-start: 6rem;
+  @media (min-width: 640px) {
+    padding-block-start: 10rem;
+  }
+}
+
+.section__header {
+  text-align: center;
+  margin-block-end: 5rem;
+
+  p {
+    font-size: 1.125rem;
+    max-width: 48ch;
+    margin-inline: auto;
+  }
+}
+
+.switch {
+  display: grid;
+  gap: 2.25rem;
+  justify-content: center;
+  @media (min-width: 992px) {
+    align-items: center;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  p {
+    font-size: 1.25rem;
+    color: #3d2427;
+    max-width: 40ch;
+  }
+
+  img {
+    border-radius: 20px;
+  }
+
+  & + & {
+    margin-block-start: 8rem;
+  }
+}
+
+// goals
+.goals {
+  padding-block: 2.125rem;
+  text-align: center;
+  @media (min-width: 768px) {
+    padding-block: 9.375rem;
+  }
+
+  &__list {
+    display: grid;
+    gap: 3rem;
+    @media (min-width: 768px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    img {
+      margin-inline: auto;
+      margin-block-end: 1rem;
+      transition: transform 0.25s ease-in-out;
+    }
+
+    h3 {
+      font-size: 1.375rem;
+      margin-block-end: 0.875rem;
+      transition: transform 0.25s ease-in-out;
+      @media (min-width: 768px) {
+        font-size: 1.875rem;
+      }
+    }
+
+    p {
+      font-size: 1.125rem;
+      color: rgba(0, 0, 0, 0.7);
+    }
+  }
+}
+
+.goal {
+  &:hover {
+    img {
+      transform: rotate(-15deg) scale(1.1);
+    }
+
+    h3 {
+      transform: scale(1.1);
+    }
+  }
+}
+
+// team
+.team {
+  padding-block: 8rem;
+  background-color: #f4f0ec;
+
+  &__list {
+    display: grid;
+    gap: 1.5rem;
+    justify-content: center;
+    @media (min-width: 992px) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    img {
+      border-radius: 20px;
+      // @media (max-width: 991px) {
+      //   order: -1;
+      // }
+    }
+  }
+
+  .help-info {
+    display: flex;
+    gap: 2rem;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 3rem 1.75rem;
+    background-color: var(--clr-white);
+    text-align: center;
+    border-radius: 20px;
+    @media (max-width: 991px) {
+      max-width: 285px;
+      order: -1;
+    }
+
+    p {
+      font-size: 1.375rem;
+      line-height: 1.75;
+    }
+
+    a {
+      display: block;
+      font-size: 1.125rem;
+      color: inherit;
+      text-decoration: none;
+      color: #4d5053;
+    }
+  }
+  .social-icons {
+    a {
+      display: inline-block;
+    }
+    a + a {
+      margin-inline-start: 1rem;
+    }
+  }
+}

@@ -1,0 +1,42 @@
+.header-single {
+  padding-block-start: 15rem;
+  background-image: url("/images/headers/single.jpg");
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  @media (min-width: 992px) {
+    padding-block-start: 22.5rem;
+  }
+
+  &__content {
+    padding-block: 1.75rem;
+    padding-inline: 1rem;
+    margin-inline: auto;
+    text-align: center;
+    color: var(--clr-brown-800);
+    background-color: var(--clr-white);
+    border-radius: 37px 37px 0px 0px;
+    width: min(100% - 1.5rem, 500px);
+  }
+
+  h1 {
+    color: inherit;
+    font-weight: 700;
+    font-size: 1.875rem;
+    line-height: 1.25;
+    margin-block-end: 0.5rem;
+    @media (min-width: 640px) {
+      font-size: 3.125rem;
+    }
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+    font-size: 1.125rem;
+    font-weight: 600;
+    @media (min-width: 640px) {
+      font-size: 1.375rem;
+    }
+  }
+}

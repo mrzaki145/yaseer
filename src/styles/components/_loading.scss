@@ -1,0 +1,68 @@
+#loading {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background-color: var(--clr-brown-800);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &.loaded {
+    animation: slide-out-top 1s 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+  }
+
+  svg {
+    transform: scale(1.25);
+  }
+}
+
+.flame {
+  animation: blink-2 2s infinite;
+  transform: translateX(37%);
+  transition: transform 0.5s ease;
+
+  .loaded & {
+    transform: translateX(0%);
+    animation: none;
+  }
+
+  &--sm {
+    animation-delay: 0.5s;
+  }
+}
+
+.text {
+  opacity: 0;
+  transform: translateX(-14%);
+  transition: 1s ease;
+  transition-property: opacity, transform;
+
+  .loaded & {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+
+@keyframes slide-out-top {
+  0% {
+    transform: translateY(0);
+    // opacity: 1;
+  }
+  100% {
+    transform: translateY(-100%);
+    // opacity: 0;
+  }
+}
+
+@keyframes blink-2 {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 1;
+  }
+}

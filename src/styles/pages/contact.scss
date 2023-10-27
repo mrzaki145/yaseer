@@ -1,0 +1,93 @@
+main {
+  padding-inline: 2rem;
+  padding-block: 6.5rem;
+  background-color: var(--clr-white);
+  box-shadow: 0px 66px 189px -80px rgba(61, 36, 39, 0.1);
+  border-radius: 50px;
+  @media (min-width: 992px) {
+    margin-block: 11.625rem;
+    padding-inline: 10.9375rem 2.5rem;
+    background-image: url("/images/contact-bg.png");
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: right;
+  }
+}
+
+.contact {
+  display: grid;
+  gap: 2.5rem;
+  @media (min-width: 992px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  &__header {
+    margin-block-end: 2.5rem;
+
+    h2 {
+      margin-block-end: 1.25rem;
+    }
+  }
+
+  &__info {
+    margin-block-start: 2.5rem;
+
+    a {
+      display: inline-flex;
+      align-items: center;
+      color: inherit;
+      text-decoration: none;
+    }
+    @media (min-width: 992px) {
+      a + a {
+        margin-inline-end: 2rem;
+      }
+    }
+
+    svg {
+      margin-inline-start: 1rem;
+    }
+  }
+}
+
+.form {
+  &__field {
+    & + & {
+      margin-block-start: 1.25rem;
+    }
+  }
+
+  &__input,
+  &__btn {
+    display: block;
+    width: 100%;
+    border-radius: 5px;
+  }
+
+  &__input {
+    text-align: start;
+    padding: 0.625rem 1.25rem;
+    border: 1px solid #e0e0e0;
+  }
+
+  &__btn {
+    font-weight: 700;
+    line-height: 1;
+    font-size: 1.125rem;
+    color: var(--clr-white);
+    background-color: var(--clr-brown-800);
+    padding: 1.25rem;
+  }
+}
+
+#map {
+  width: 100%;
+  min-height: 400px;
+
+  iframe {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    // border-radius: inherit;
+  }
+}

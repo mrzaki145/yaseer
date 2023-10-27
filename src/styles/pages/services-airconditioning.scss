@@ -1,0 +1,125 @@
+.main {
+  padding-block: 3rem;
+  @media (min-width: 992px) {
+    padding-block: 9.325rem;
+  }
+
+  &__header {
+    margin-block-end: 8.75rem;
+
+    img {
+      border-radius: 50px;
+      margin-block-end: 2.5rem;
+    }
+
+    p {
+      color: #4d5053;
+      font-size: 1.375rem;
+    }
+  }
+}
+
+/* projects */
+.projects {
+  background-color: #f4f0ec;
+  padding-block: 6.5rem;
+
+  &__list {
+    display: grid;
+    gap: 4rem;
+    justify-content: center;
+
+    @media (min-width: 992px) {
+      justify-items: center;
+      justify-content: start;
+      /* justify-items: space-between; */
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  h3 {
+    color: #3d2427;
+    font-size: 1.375rem;
+    margin-block-end: 0.875rem;
+  }
+
+  p {
+    color: #3d2427;
+    font-size: 1.125rem;
+    max-width: 32ch;
+  }
+}
+
+.project {
+  display: flex;
+  flex-direction: column;
+  @media (min-width: 480px) {
+    flex-direction: row;
+  }
+
+  &__icn {
+    width: 35px;
+    height: 35px;
+    flex-shrink: 0;
+    @media (max-width: 479px) {
+      margin-block-end: 1.25rem;
+    }
+    @media (min-width: 480px) {
+      margin-inline-end: 1.25rem;
+    }
+  }
+}
+
+/* air-cons */
+.air-cons {
+  padding-block-start: 9.325rem;
+
+  &__type {
+    display: grid;
+    gap: 2.5rem;
+    @media (min-width: 992px) {
+      gap: 4.5rem;
+      align-items: center;
+      grid-template-columns: repeat(2, 1fr);
+
+      &:nth-child(odd) img {
+        order: 1;
+      }
+    }
+
+    /* .swiper {
+      width: auto !important;
+    } */
+
+    & + & {
+      margin-block-start: 2.5rem;
+      @media (min-width: 992px) {
+        margin-block-start: 8.6325rem;
+      }
+    }
+  }
+
+  img {
+    border-radius: 326.5px 0px 123px;
+    filter: drop-shadow(0px 0px 100px rgba(212, 212, 212, 0.25));
+  }
+
+  h3 {
+    font-size: 2rem;
+    color: #3d2427;
+    margin-block-end: 1.25rem;
+  }
+
+  p {
+    color: #4d5053;
+    max-width: 45ch;
+  }
+  p + p {
+    margin-block-start: 1.5rem;
+  }
+}
+
+/* clients */
+.clients {
+  background-color: transparent;
+}

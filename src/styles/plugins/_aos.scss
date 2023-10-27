@@ -1,0 +1,21 @@
+[data-aos="img-reveal-left"] {
+  // opacity: 0;
+  clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+  transition-property: clip-path, opacity;
+
+  &.aos-animate {
+    // opacity: 1;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+}
+
+[data-aos="img-reveal-right"] {
+  // opacity: 0;
+  clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+  transition-property: clip-path, opacity;
+
+  &.aos-animate {
+    // opacity: 1;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+}

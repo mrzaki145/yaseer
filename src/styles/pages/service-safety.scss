@@ -1,0 +1,182 @@
+.main {
+  padding-block: 3rem;
+  @media (min-width: 992px) {
+    padding-block: 9.325rem;
+  }
+
+  &__header {
+    margin-block-end: 8.75rem;
+
+    img {
+      border-radius: 50px;
+      margin-block-end: 2.5rem;
+    }
+
+    p {
+      color: #4d5053;
+      font-size: 1.375rem;
+    }
+  }
+}
+
+/* features */
+.features {
+  margin-block: 9.375rem;
+
+  &__list {
+    display: grid;
+    gap: 2.25rem;
+    @media (min-width: 992px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+
+.feature {
+  display: flex;
+  padding: 2.125rem 2.875rem;
+  background: #f4f0ec;
+  border-radius: 20px;
+
+  img {
+    width: 34px;
+    height: 34px;
+    flex-shrink: 0;
+    margin-inline-end: 1.25rem;
+  }
+
+  h3 {
+    color: var(--clr-brown-800);
+    font-size: 1.325rem;
+    margin-block-end: 0.5rem;
+  }
+
+  p {
+    font-size: 1.125rem;
+    color: var(--clr-brown-800);
+  }
+}
+
+/* install alarm */
+.install-alarm {
+  font-size: 1.25rem;
+  margin-block-end: 9.375rem;
+
+  &__grid {
+    display: grid;
+    gap: 5rem;
+    @media (min-width: 992px) {
+      align-items: center;
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  h2 {
+    color: var(--clr-brown-800);
+    font-size: 2rem;
+    margin-block-end: 1.5rem;
+  }
+
+  p {
+    color: #4d5053;
+  }
+  p + p {
+    margin-block-start: 1rem;
+  }
+
+  &__list {
+    list-style: initial;
+    padding-inline-start: 2.5rem;
+    margin-block-start: 2.5rem;
+    color: #7e7e7e;
+
+    &::marker {
+      color: red;
+    }
+  }
+
+  img {
+    border-radius: 326.5px 0px 123px;
+    filter: drop-shadow(0px 0px 100px rgba(212, 212, 212, 0.25));
+  }
+}
+
+/* install-system */
+.install-system {
+  margin-block-end: 9.375rem;
+
+  &__header {
+    margin-block-end: 2rem;
+
+    h2 {
+      font-size: 2rem;
+      color: var(--clr-brown-800);
+      margin-block-end: 1.25rem;
+    }
+
+    p {
+      font-size: 1.25rem;
+      color: #4d5053;
+      max-width: 65ch;
+    }
+  }
+
+  img {
+    border-radius: 50px;
+    margin-block-end: 3.5rem;
+  }
+
+  &__systems {
+    display: grid;
+    gap: 4rem;
+    @media (min-width: 992px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  h3 {
+    max-width: 30ch;
+    font-size: 1.625rem;
+    line-height: 1.75;
+    color: var(--clr-brown-800);
+    margin-block-end: 2.5rem;
+  }
+
+  ol {
+    font-size: 1.125rem;
+    list-style: decimal;
+    padding-inline-start: 1.5rem;
+  }
+
+  li {
+    color: #4d5053;
+  }
+  li + li {
+    margin-block-start: 1rem;
+  }
+}
+
+/* contract */
+.contract {
+  &__grid {
+    display: grid;
+    gap: 4.5rem;
+    @media (min-width: 992px) {
+      align-items: center;
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  h2 {
+    font-size: 2rem;
+    margin-block-end: 1rem;
+  }
+
+  p {
+    font-size: 1.25rem;
+    color: #4d5053;
+  }
+
+  img {
+    border-radius: 50px;
+  }
+}

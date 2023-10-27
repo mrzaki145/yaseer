@@ -1,0 +1,232 @@
+.header {
+  isolation: isolate;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("/images/headers/home.jpg");
+  background-color: #f7f7f7;
+  text-align: center;
+  color: var(--clr-white);
+  @media (max-width: 768px) {
+    padding-block: 10rem 8rem;
+  }
+  @media (min-width: 992px) {
+    padding-block: 14rem 4rem;
+  }
+
+  &__title {
+    color: inherit;
+    font-size: 2.5rem;
+    line-height: 1.5;
+    max-width: 18ch;
+    margin-inline: auto;
+    margin-block-end: 2.5rem;
+    @media (min-width: 768px) {
+      font-size: 3rem;
+    }
+    @media (min-width: 992px) {
+      font-size: 4rem;
+    }
+  }
+
+  &__lead {
+    margin-block-end: 3.125rem;
+  }
+
+  .swiper-pagination {
+    text-align: center;
+  }
+  .swiper-pagination-bullet:not(.swiper-pagination-bullet-active) {
+    background-color: var(--clr-white) !important;
+  }
+}
+
+// about-us
+.about-us {
+  padding-block: 2.125rem;
+  background-color: #f7f7f7;
+  @media (min-width: 768px) {
+    padding-block: 9.375rem;
+  }
+
+  &__grid {
+    overflow: hidden;
+    display: grid;
+    gap: 5rem;
+    @media (min-width: 992px) {
+      align-items: center;
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  img {
+    margin-inline: auto;
+  }
+
+  p {
+    font-size: 1.25rem;
+    line-height: 2;
+    color: rgba(0, 0, 0, 0.5);
+    max-width: 45ch;
+    // margin-block-end: 2rem;
+  }
+}
+
+// services
+.services {
+  padding-block: 2.5rem;
+
+  &__header {
+    position: relative;
+    @media (min-width: 992px) {
+      padding-block-start: 4.5rem;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      height: 150px;
+      background-image: url("/images/icons/arrow.svg");
+      background-size: 100% auto;
+      background-repeat: no-repeat;
+      @media (max-width: 991px) {
+        width: 100px;
+        inset-inline-start: 180px;
+        inset-block-start: -68%;
+        transform: rotateY(180deg) rotateZ(-90deg);
+      }
+      @media (min-width: 992px) {
+        width: 130px;
+        inset-block-end: 15%;
+        inset-inline-end: 10%;
+      }
+    }
+
+    h2 {
+      margin: 0;
+    }
+  }
+
+  &__grid {
+    display: grid;
+    gap: 4rem;
+
+    @media (min-width: 992px) {
+      grid-template-columns: 1fr 2fr;
+    }
+  }
+
+  &__list {
+    display: grid;
+    gap: 2rem;
+    @media (min-width: 768px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+
+[dir="ltr"] .services__header::after {
+  transform: rotateY(180deg);
+
+  @media (max-width: 991px) {
+    transform: rotateZ(-90deg);
+  }
+}
+
+.service {
+  padding: 2rem;
+  background-color: var(--clr-white);
+  border-radius: 10px;
+  transition: box-shadow 0.25s ease-out;
+  &:hover {
+    box-shadow: 40px 0px 70px rgba(121, 121, 121, 0.05),
+      -40px 100px 70px rgba(121, 121, 121, 0.05);
+  }
+
+  &__icn {
+    width: 50px;
+    height: 50px;
+    margin-block-end: 1.5rem;
+  }
+
+  &__name {
+    font-size: 1.25rem;
+    margin-block-end: 1rem;
+  }
+
+  &__desc {
+    color: rgba(0, 0, 0, 0.5);
+  }
+}
+
+// features
+.features {
+  padding-block: 2.125rem;
+  background-color: #f7f7f7;
+  @media (min-width: 768px) {
+    padding-block: 9.375rem;
+  }
+
+  &__grid {
+    display: grid;
+    gap: 4.5rem;
+
+    @media (min-width: 922px) {
+      align-items: center;
+      grid-template-columns: 1.125fr 1fr;
+    }
+  }
+
+  &__img {
+    margin-inline: auto;
+    filter: drop-shadow(0px 101.786px 81.4289px rgba(0, 0, 0, 0.11))
+      drop-shadow(0px 22.7353px 18.1882px rgba(0, 0, 0, 0.0655718))
+      drop-shadow(0px 6.76889px 5.41511px rgba(0, 0, 0, 0.0444282));
+  }
+}
+
+.feature {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  box-shadow: 40px 0px 70px rgba(121, 121, 121, 0.05),
+    -40px 100px 70px rgba(121, 121, 121, 0.05);
+  border-radius: 10px;
+  @media (min-width: 480px) {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  & + & {
+    margin-block-start: 1.25rem;
+  }
+
+  &__icn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 64px;
+    height: 64px;
+    flex-shrink: 0;
+    background-color: #d9d9d9;
+    margin-inline-end: 0.875rem;
+    margin-block-end: 0.875rem;
+    border-radius: 50%;
+  }
+
+  h3 {
+    font-size: 1.125rem;
+    margin-block-end: 0.5rem;
+  }
+
+  p {
+    font-size: 0.875rem;
+    color: rgba(0, 0, 0, 0.5);
+  }
+}
